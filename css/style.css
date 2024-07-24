@@ -1,0 +1,382 @@
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --blue-light: #0000FF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  /* background-color: black; */
+  
+  color: white;
+  transition: all 0.3s;
+  font-family: "Readex Pro", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to right, rgb(26, 29, 55) ,  rgb(14, 15, 29),  rgb(26, 29, 55)); 
+}
+
+/* nav */
+header {
+  margin-top: 0px;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+header.sticky {
+  box-shadow: 10px 30px 90px 10px  rgb(14, 15, 29);
+  background-color: rgb(27, 33, 85);
+}
+
+nav {
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+nav .logo img {
+  max-width: 100%;
+  width: 40px;
+  height: auto;
+  margin-left: 48px;
+  /* margin-bottom: 2rem; */
+}
+
+nav .nav-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 99%;
+  left: 0;
+  right: 0;
+  padding: 0px;
+  font-size: 20px;
+  margin-left: auto;
+  background: rgb(27, 33, 85);
+  clip-path: circle(0.0% at 100% 0);
+  margin-right: 15px;
+  /* padding-bottom: 3rem; */
+}
+
+
+/* search */
+.search-box {
+  background-color: white;
+  border-radius: 40px;
+  
+}
+
+.search-box a i {
+  color: black;
+  padding-left: 5px;
+}
+
+.search-box input {
+  outline: none;
+  color: black;
+  background: transparent;
+  font-family: "Readex Pro", sans-serif;
+  width: 130px;
+}
+/* search */
+
+
+nav .nav-menu.active {
+  clip-path: circle(141.2% at 100% 0);
+  /* border-radius: 10px; */
+}
+
+nav .nav-menu a:hover {
+  color: var(--blue-light);
+}
+
+nav .nav-menu .active {
+  color: var(--blue-light);
+}
+
+nav .nav-btn {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  margin-right: 20px;
+  border: none;
+}
+
+nav .nav-btn .btn-menu {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px;
+  background-color: var(--blue-light);
+  border-radius: 4px;
+}
+
+nav .nav-btn .btn-menu .line {
+  width: 16px;
+  height: 2px;
+  background-color: white;
+}
+
+
+/* nav */
+/* hero */
+.img-slide {
+  margin-top: 7rem;
+}
+
+.container {
+  max-width: 512px;
+  margin-right: 16px;
+  margin-left: 56px;
+  margin: 0 auto;
+}
+
+.img-wrapper {
+  width: 1039px;
+  margin: auto;
+  overflow: hidden;
+
+}
+
+.img-slider {
+  display: flex;
+  /* gap: 20px; */
+  width: 100%;
+}
+
+.img-slider img {
+  width: 100%;
+}
+
+#slide-1:target ~ .img-slider {
+  margin-left: 0px;
+}
+
+#slide-2:target ~ .img-slider {
+  margin-left: -100%;
+}
+
+#slide-3:target ~ .img-slider {
+  margin-left: -200%;
+}
+
+.navigation {
+  text-align: center;
+}
+
+.navigation a {
+  display: inline-block;
+  width: 4.5px;
+  height: 5px;
+  background-color: gray;
+  font-size: 0px;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.navigation a.active {
+  background-color: white;
+}
+
+
+/* hero */
+/* card game */
+.game-popular {
+  margin-top: 2rem;
+}
+
+.title-page {
+  font-size: 20px;
+  margin-left: 3rem;
+}
+
+.card-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, 1fr); 
+  margin-left: 3rem;
+  margin-right: 2rem;
+}
+
+.card-menu {
+  align-items: center;
+  border: 2px solid var(--blue-light);
+  padding-bottom: 15px;
+  border-radius: 10px;
+  max-width: 140px;
+  margin-top: 2rem;
+}
+
+.card-menu:hover {
+  box-shadow: 0px 10px 35px 5px var(--blue-light);
+}
+
+.card-menu img {
+  width: 140px;
+  max-width: 100%;
+  height: auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.dev-name {
+  margin-top: 3px;
+  text-align: center;
+  font-size: 10px;
+  color: white;
+}
+
+.game-name {
+  text-align: center;
+  font-size: 10px;
+}
+
+.btn {
+  text-align: center;
+  margin-top: 20px;
+  border: 1px solid white;
+  border-radius: 20px;
+  background-color: white;
+  max-width: 90%;
+  margin-right: 10px;
+  margin-left: 10px;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  cursor: pointer;
+}
+
+.btn a {
+  background-color: white;
+  color: black;
+}
+
+/* end card game */
+/* game seluler */
+.game-seluler {
+  margin-top: 5rem;
+}
+/* end game seluler */
+/* footer */
+footer {
+  background-color: rgb(27, 33, 85);
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+.footer-wrap {
+  display: grid;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+
+}
+
+.footer-logo .footer-desc {
+  margin-left: 2rem;
+}
+
+.footer-link-title {
+  padding-top: 2rem;
+  width: 60px;
+  margin-bottom: 2rem;
+}
+
+.icon-footer {
+  text-align: center;
+  background-color: white;
+  margin-top: 1rem;
+  border-radius: 10px;
+  /* display: flex; */
+  align-items: center;
+}
+
+.icon-compt h5, p {
+  text-align: center;
+  color: black;
+}
+
+.icon-text h5 {
+  color: black;
+  text-align: center;
+}
+/* footer */
+
+
+
+@media screen and (max-width: 1130px) {
+  .img-wrapper {
+    width: 90%;
+    height: auto;
+    max-width: 100%;
+  }
+} 
+
+@media screen and (max-width: 600px) {
+  .img-wrapper {
+    width: 90%;
+    height: auto;
+    max-width: 100%;
+  }
+} 
+
+
+@media (min-width: 720px) {
+  .container {
+    max-width: 720px;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .game-name {
+    font-size: 15px;
+  
+  }
+  .nav-menu {
+    display: block;
+  }
+  nav .nav-btn .btn-menu {
+    display: none;
+  }
+
+  nav .nav-menu {
+    flex-direction: row;
+    position: relative;
+    background-color: transparent;
+    clip-path: none;
+  }
+  .footer-logo {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (min-width: 1140px) {
+  .container {
+    max-width: 1140px;
+  }
+  .card-grid {
+    grid-template-columns: repeat(6, 1fr); 
+  }
+
+}
